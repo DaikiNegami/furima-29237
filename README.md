@@ -29,7 +29,7 @@
 | shipping_burden_id | integer    | null: false                    | 
 | prefecture_id      | integer    | null: false                    |
 | handling_time_id   | integer    | null: false                    |
-| price              | string     | null: false                    |
+| price              | iteger     | null: false                    |
 | user               | reference  | null: false, foreign_key: true |
 
 ### Association
