@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_many :purchase
+- has_many :purchases
 
 ## items テーブル
 
@@ -36,7 +36,6 @@
 
 - belongs_to :user
 - has_one :purchase
-- has_many :addresses
 - has_one_attached :image
 - belongs_to_active_hash :prefecture
 - belongs_to_active_hash :category
@@ -54,6 +53,7 @@
 ### Association
 
 - belongs_to :user
+- belongs_to :item
 - has_one :address
 
 ## addresses テーブル
@@ -72,6 +72,5 @@
 ### Association
 
 - belongs_to :purchase
-- belongs_to :item
 - belongs_to_active_hash :prefecture
 
