@@ -16,42 +16,33 @@
 ### Association
 
 - has_many :items
-- has_many :comments
 - has_many :purchase
 
 ## items テーブル
 
-| Column          | Type       | Options                        |
-| --------------- | ---------- | ------------------------------ |
-| image           | string     | null: false                    |
-| name            | string     | null: false                    |
-| description     | text       | null: false                    |
-| category        | string     | null: false                    |
-| condition       | string     | null: false                    | 
-| postage_payer   | string     | null: false                    | 
-| prefecture_id   | integer    | null: false                    |
-| handling_time   | string     | null: false                    |
-| price           | string     | null: false                    |
-| user            | reference  | null: false, foreign_key: true |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| name               | string     | null: false                    |
+| description        | text       | null: false                    |
+| category_id        | integer    | null: false                    |
+| condition_id       | integer    | null: false                    | 
+| shipping_burden_id | integer    | null: false                    | 
+| prefecture_id      | integer    | null: false                    |
+| handling_time_id   | integer    | null: false                    |
+| price              | string     | null: false                    |
+| user               | reference  | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :users
-- has_many :comments
-- has_one :purchases
-
-## comments テーブル
-
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| user    | references | null: false, foreign_key: true |
-| item    | references | null: false, foreign_key: true |
-| comment | text       | null: false                    |
-
-### Association
-
-- belongs_to :users
-- belongs_to :items
+- belongs_to :user
+- has_one :purchase
+- has_many :addresses
+- has_one_attached :image
+- belongs_to_active_hash :prefecture
+- belongs_to_active_hash :category
+- belongs_to_active_hash :condition
+- belongs_to_active_hash :handling_time
+- belongs_to_active_hash :shipping_burden
 
 ## purchases テーブル
 
@@ -62,8 +53,8 @@
 
 ### Association
 
-- belongs_to :users
-- has_one :addresses
+- belongs_to :user
+- has_one :address
 
 ## addresses テーブル
 
@@ -80,5 +71,7 @@
 
 ### Association
 
-- belongs_to :purchases
+- belongs_to :purchase
+- belongs_to :item
 - belongs_to_active_hash :prefecture
+
