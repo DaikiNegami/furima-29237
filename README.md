@@ -1,4 +1,13 @@
+<<<<<<< Updated upstream
 # テーブル設計
+=======
+<<<<<<< Updated upstream
+# README
+=======
+<<<<<<< Updated upstream
+# テーブル設計
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 ## users テーブル
 
@@ -74,3 +83,12 @@
 - belongs_to :purchase
 - belongs_to_active_hash :prefecture
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+* ...
+=======
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
