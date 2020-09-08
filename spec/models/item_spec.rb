@@ -37,27 +37,27 @@ RSpec.describe Item, type: :model do
         it "category_idが0では登録できない" do
           @item.category_id = 0
           @item.valid?
-          expect(@item.errors.full_messages).to include("Category must be other than 0")
+          expect(@item.errors.full_messages).to include("Category Select")
         end
         it "condition_idが0では登録できない" do
           @item.condition_id = 0
           @item.valid?
-          expect(@item.errors.full_messages).to include("Condition must be other than 0")
+          expect(@item.errors.full_messages).to include("Condition Select")
         end
         it "shipping_burden_idが0では登録できない" do
           @item.shipping_burden_id = 0
           @item.valid?
-          expect(@item.errors.full_messages).to include("Shipping burden must be other than 0")
+          expect(@item.errors.full_messages).to include("Shipping burden Select")
         end
         it "prefecture_idが0では登録できない" do
           @item.prefecture_id = 0
           @item.valid?
-          expect(@item.errors.full_messages).to include("Prefecture must be other than 0")
+          expect(@item.errors.full_messages).to include("Prefecture Select")
         end
         it "handling_time_idが0では登録できない" do
           @item.handling_time_id = 0
           @item.valid?
-          expect(@item.errors.full_messages).to include("Handling time must be other than 0")
+          expect(@item.errors.full_messages).to include("Handling time Select")
         end
         it "priceが空では登録できない" do
           @item.price = nil
