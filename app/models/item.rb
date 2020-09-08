@@ -15,6 +15,6 @@ class Item < ApplicationRecord
     validates :image
     validates :price, numericality: { greater_than: 299, less_than: 10000000 }
   end
-  validates :category_id, :condition_id, :shipping_burden_id, :prefecture_id, :handling_time_id, numericality: { other_than: 0 }
-  
+
+    validates :category_id, :condition_id, :shipping_burden_id, :prefecture_id, :handling_time_id, numericality: { other_than: 0, message: 'Select' }
 end
