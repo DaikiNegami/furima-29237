@@ -8,10 +8,8 @@ window.addEventListener("load", function(){
     number = input.value * 0.1
     result1 = Math.ceil(number)
     tax.innerHTML = result1
-    console.log(tax.innerHTML)
 
     result2 = input.value - result1
     profit.innerHTML = result2
-    console.log(profit.innerHTML)
   }
 })
