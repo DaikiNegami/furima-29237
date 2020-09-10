@@ -5,7 +5,7 @@ class AddressesController < ApplicationController
     if @address.save
       redirect_to root_path
     else
-      render purchases_path
+      render item_purchases_path(@item)
     end
 
   end
