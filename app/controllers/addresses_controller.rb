@@ -1,8 +1,8 @@
 class AddressesController < ApplicationController
 
   def create
-    address = Address.create(address_params)
-    if address.save
+    @address = Address.create(address_params)
+    if @address.save
       redirect_to root_path
     else
       render purchases_path
