@@ -5,7 +5,7 @@ class ItemPurchase
 
   with_options presence: true do
     validates :token
-    validates :post_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: 'Post code input correctly' }
+    validates :post_code, format: { with: /\A\d{3}[-]\d{4}\z/, message: 'input correctly' }
     validates :city, :address
     validates :phone_number, format: { with: /\A0[0-9]{9,10}\z/, message: 'is invalid. Input phone number within 11 digits' }
   end
